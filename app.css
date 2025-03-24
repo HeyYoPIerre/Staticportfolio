@@ -8,6 +8,10 @@ body {
     background-color: #190041 !important;
 }
 
+.color-gradiant {
+    background: radial-gradient(circle at top, #2a0057, #190041, #0f002b);
+}
+
 .navbar-brand {
     font-weight: bold;
     font-size: 20px;
