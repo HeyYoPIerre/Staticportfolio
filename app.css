@@ -1,8 +1,29 @@
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', sans-serif !important;
+    color: white !important;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: #190041;
+    background-color: #190041 !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav-link {
+    color: white !important;
+}
+.nav-link:hover {
+    color: #ff6600 !important;
+}
+.section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+.profilpic img{
+    max-height: 60vh;
+    max-width: 100%;
+    width: auto;
 }
