@@ -16,21 +16,27 @@ body {
     font-weight: bold;
     font-size: 20px;
 }
+
 .nav-link {
     color: white !important;
 }
+
 .nav-link:hover {
     color: #ff6600 !important;
 }
+
 .section {
     padding: 100px 20px;
     min-height: 100vh;
 }
-.profilpic img{
-    max-height: 60vh;
+
+.profilpic img {
+    max-height: 40vh;
     max-width: 100%;
     width: auto;
+    border-radius: 5%;
 }
+
 footer {
     color: #fff;
     display: flex;
@@ -64,4 +70,106 @@ footer .social-media i {
 
 footer .social-media i:hover {
     transform: scale(1.1);
+}
+
+/*
+    Card
+*/
+:root {
+    --spread: 80;
+    --blur: 12;
+    --active: 0;
+    --start: 0deg;
+}
+
+.glow-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.glow-card {
+    position: relative;
+    flex: 1;
+    height: 200px;
+    background: radial-gradient(circle at top, #2a0057, #190041, #0f002b);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid #2a2e5a;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.card-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #f626af !important;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.card-content span:first-child {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-content span:last-child {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.glow-card:hover {
+    transform: scale(1.05);
+    border-color: transparent;
+}
+
+.glow-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    pointer-events: none;
+    opacity: var(--active);
+    border: 3px solid transparent;
+    z-index: 1;
+    background: conic-gradient(from var(--start),
+            #f626af 0deg,
+            #8228ec 90deg,
+            #f626af 180deg,
+            #0025ba 270deg,
+            #f626af 360deg);
+
+    mask: linear-gradient(#0000, #0000),
+        conic-gradient(from var(--start),
+            #000 0deg,
+            #fff,
+            #0000 180deg,
+            #000 280deg);
+    mask-composite: intersect;
+    mask-clip: padding-box, border-box;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.glow-card:hover .glow-border {
+    opacity: 1;
 }
