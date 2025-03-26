@@ -8,6 +8,11 @@ body {
     background-color: #190041 !important;
 }
 
+#experience {
+    background-image: url('hero.svg');
+    background: opacity(0.5);
+}
+
 .color-gradiant {
     background: radial-gradient(circle at top, #2a0057, #190041, #0f002b);
 }

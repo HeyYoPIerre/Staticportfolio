@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const CONFIG = {
         proximity: 50,
-        opacity: 1, // Bordure lumineuse bien visible
+        opacity: 1,
     };
 
     const UPDATE = (event) => {
@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const BORDER = CARD.querySelector(".glow-border");
             const BOUNDS = CARD.getBoundingClientRect();
 
-            // Vérifie si la souris est proche
             if (
                 event.clientX > BOUNDS.left - CONFIG.proximity &&
                 event.clientX < BOUNDS.right + CONFIG.proximity &&
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 BORDER.style.setProperty("--active", 0);
             }
 
-            // Calcul de l'angle pour l'effet de lumière
             const CENTER_X = BOUNDS.left + BOUNDS.width / 2;
             const CENTER_Y = BOUNDS.top + BOUNDS.height / 2;
             let ANGLE = Math.atan2(event.clientY - CENTER_Y, event.clientX - CENTER_X) * (180 / Math.PI);
