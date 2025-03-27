@@ -1,3 +1,4 @@
+// Card glow
 document.addEventListener("DOMContentLoaded", () => {
     const CARDS = document.querySelectorAll(".glow-card");
 
@@ -32,4 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     document.body.addEventListener("mousemove", UPDATE);
+});
+
+// Skills
+
+// Sélection du conteneur
+const skillsContainer = document.querySelector('.skills-container');
+
+// Arrêter le défilement au survol
+skillsContainer.addEventListener('mouseenter', () => {
+    skillsContainer.style.animationPlayState = 'paused';
+});
+
+// Reprendre le défilement quand la souris quitte
+skillsContainer.addEventListener('mouseleave', () => {
+    skillsContainer.style.animationPlayState = 'running';
 });
