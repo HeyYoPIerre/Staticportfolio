@@ -8,9 +8,16 @@ body {
     background-color: #190041 !important;
 }
 
-#experience {
-    background-image: url('hero.svg');
-    background: opacity(0.5);
+h1 {
+    text-align: start;
+}
+
+.name{
+    color: #7f5af0; 
+}
+
+.devweb {
+    color: #D444CF;
 }
 
 .color-gradiant {
@@ -18,6 +25,7 @@ body {
 }
 
 .navbar-brand {
+    color: #f626af !important;
     font-weight: bold;
     font-size: 20px;
 }
@@ -27,7 +35,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #ff6600 !important;
+    color: #D444CF !important;
 }
 
 .section {
@@ -42,30 +50,30 @@ body {
     border-radius: 5%;
 }
 
-footer {
-    color: #fff;
+.social {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
 }
 
-footer a {
-    font-size: 20px;
+.social p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.social-media a {
+    font-size: 40px;
     text-decoration: none;
     color: #5f5f5f;
 }
 
-footer .social-media {
+.social-media {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-footer .social-media i {
+.social-media i {
     margin-right: 15px;
     padding: 5px;
     text-align: center;
@@ -73,7 +81,7 @@ footer .social-media i {
     transition: transform 0.3s ease-in-out;
 }
 
-footer .social-media i:hover {
+.social-media i:hover {
     transform: scale(1.1);
 }
 
@@ -190,46 +198,77 @@ footer .social-media i:hover {
     position: relative;
 }
 
+#skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7f5af0, transparent);
+    transition: opacity 0.5s ease-in-out;
+}
+
 .skills-title {
     font-size: 24px;
     font-weight: bold;
     color: white;
     display: inline-block;
     padding: 10px 30px;
-    background-color: #1a1443;
+    background-color: #0f002b;
     border-radius: 8px;
     margin-bottom: 30px;
 }
 
+
 .skills-container {
+    gap: 50px;
     display: flex;
     white-space: nowrap;
-    animation: scroll 15s linear infinite;
+    animation: scroll 30s linear infinite;
+    width: max-content;
 }
 
 @keyframes scroll {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
+
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
-/* Carte Skill */
+/* 
+    Card Skill 
+*/
 .skill-card {
-    width: 120px;
-    margin: 2rem;
-    background-color: #22264b;
-    padding: 15px;
+    width: 250px;
+    background: radial-gradient(circle at top, #2a0057, #190041, #0f002b);
+    padding: 25px 20px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7f5af0, transparent);
+    transition: opacity 0.5s ease-in-out;
 }
 
 .skill-card:hover {
-    transform: scale(1.15);
-    border: 1px solid #7f5af0;
+    transform: scale(1.1);
 }
 
 .skill-card img {
@@ -241,4 +280,75 @@ footer .social-media i:hover {
     color: white;
     font-size: 14px;
     margin-top: 10px;
+}
+/* 
+    Education
+*/
+
+#education{
+    background-image: url('hero.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: auto;
+    overflow:hidden;
+}
+
+/* 
+    Contact Form
+*/
+
+.form-control {
+    background-color: #000 !important;
+    color: white !important;
+    border: 1px solid #444 !important;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+    background-color: #000 !important;
+    color: white !important;
+    border-color: #D444CF !important;
+    box-shadow: 0 0 5px #D444CF !important;
+}
+
+.card {
+    background-color: #0f002b !important;
+    border-radius: 10px;
+    border: none;
+}
+
+.card label {
+    color: white;
+}
+
+.cta {
+    background: linear-gradient(to right, #D444CF 0%, #2a0057 50%, #D444CF 100%);
+    color: white;
+    border-radius: 50px;
+    padding: 20px 30px;
+    z-index: 101;
+}
+
+.btn-primary {
+    border: none !important;
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7f5af0, transparent);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.cta:hover {
+    background: linear-gradient(to right, #2a0057 100%, #D444CF 0%);
+    color: white;
 }
