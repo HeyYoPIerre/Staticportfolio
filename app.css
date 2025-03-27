@@ -59,10 +59,83 @@ h1 {
     line-height: 1.9rem;
 }
 
-#landing .cta{
-    margin-top: 1.3rem;
-    margin-bottom: 1.3rem;
+#landing .cta {
+    margin: 1.5rem;
+    background: linear-gradient(to right, #2a0057 0%, #D444CF 50%, #2a0057 100%);
+    color: white;
+    border-radius: 24px;
+    padding: 12px 24px; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    display: inline-block;
+    border: none; 
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(212, 68, 207, 0.3); 
+}
 
+#landing .cta:hover {
+    background: linear-gradient(to right, #D444CF 0%, #2a0057 100%);
+    color: white;
+    transform: scale(1.05); 
+    box-shadow: 0px 6px 20px rgba(212, 68, 207, 0.5); 
+}
+
+#landing .cta:active {
+    transform: scale(0.98); 
+    box-shadow: 0px 3px 10px rgba(212, 68, 207, 0.4);
+}
+
+/* 
+    Terminal
+*/
+
+.terminal {
+    background: linear-gradient(to right, #0d1224, #0a0d37);
+    border: 2px solid rgba(27, 44, 104, 0.63);
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.terminal-header {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 10px;
+}
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.red { background-color: #ff5f56; }
+.orange { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+.code {
+    font-size: 14px;
+    white-space: pre-line;
+}
+.keyword { color: #ff79c6; }
+.variable { color: #8be9fd; }
+.string { color: #f1fa8c; }
+.number { color: #bd93f9; }
+.boolean { color: #ffb86c; }
+.function { color: #50fa7b; }
+.operator { color: #ff79c6; }
+.btn-check-hire {
+    background-color: #50fa7b;
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .social {

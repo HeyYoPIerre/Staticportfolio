@@ -90,3 +90,27 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         this.reset();
     }
 });
+
+// Terminal
+
+const coder = {
+    name: 'Pierre Mitou',
+    skills: ['Laravel', 'Livewire', 'NodeJs', 'Git', 'Javascript', 'MySQL', 'Symfony', 'Bootstrap', 'PHP'],
+    hardWorker: true,
+    quickLearner: true,
+    problemSolver: true,
+    hireable: function() {
+        return this.hardWorker && this.problemSolver && this.skills.length >= 5;
+    }
+};
+
+function checkHireable() {
+    const resultElement = document.getElementById("hire-result");
+    if (coder.hireable()) {
+        resultElement.innerHTML = "✅ Bien sûr que oui !";
+        resultElement.style.color = "#50fa7b";
+    } else {
+        resultElement.innerHTML = "❌ Aïe";
+        resultElement.style.color = "#ff5f56";
+    }
+}

@@ -41,25 +41,46 @@
                         <h1>Bonjour, je m'appelle <div class="name">Pierre MITOU</div> et je suis à la recherche d'une
                             alternance entant que <div class="devweb">Développeur Web</div>
                         </h1>
-                        <a href="Professional Minimalist CV Resume.pdf" target="_blank" class="btn btn-primary cta">
+                        <a href="Professional Minimalist CV Resume.pdf" target="_blank" class="btn cta">
                             Voir mon CV
                         </a>
                     </div>
                     <div class="col-md-6 col-12">
-                        constcoder={
-                        name:'Abu Said',
-                        skills:['React', 'NextJS', 'Redux', 'Express', 'NestJS', 'MySql', 'MongoDB', 'Docker', 'AWS'],
-                        hardWorker:true,
-                        quickLearner:true,
-                        problemSolver:true,
-                        hireable:function() {
-                        return(
-                        this.hardWorker&&
-                        this.problemSolver&&
-                        this.skills.length>=5
-                        );
-                        };
-                        };
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="circle red"></div>
+                                <div class="circle orange"></div>
+                                <div class="circle green"></div>
+                            </div>
+                            <div class="code">
+                                <span class="keyword">const</span> <span class="variable">coder</span> <span
+                                    class="operator">=</span> {<br>
+                                &nbsp;&nbsp;<span class="variable">name</span>: <span class="string">'Pierre
+                                    Mitou'</span>,<br>
+                                &nbsp;&nbsp;<span class="variable">skills</span>: [<span class="string">'Laravel'</span>,
+                                <span class="string">'Livewire'</span>, <span class="string">'NodeJs'</span>, <span
+                                    class="string">'Git'</span>, <span class="string">'JavaScript'</span>, <span
+                                    class="string">'MySQL'</span>, <span class="string">'Symfony'</span>, <span
+                                    class="string">'Bootstrap'</span>, <span class="string">'PHP'</span>],<br>
+                                &nbsp;&nbsp;<span class="variable">hardWorker</span>: <span
+                                    class="boolean">true</span>,<br>
+                                &nbsp;&nbsp;<span class="variable">quickLearner</span>: <span
+                                    class="boolean">true</span>,<br>
+                                &nbsp;&nbsp;<span class="variable">problemSolver</span>: <span
+                                    class="boolean">true</span>,<br>
+                                &nbsp;&nbsp;<span class="variable function">hireable</span>: <span
+                                    class="function">function</span>() {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> (this.<span
+                                    class="variable">hardWorker</span> <span class="operator">&amp;&amp;</span>
+                                this.<span class="variable">problemSolver</span> <span
+                                    class="operator">&amp;&amp;</span> this.<span class="variable">skills.length</span>
+                                <span class="operator">>=</span> <span class="number">5</span>);<br>
+                                &nbsp;&nbsp;}<br>
+                                };
+                            </div>
+                            <button class="btn-check-hire" onclick="checkHireable()">Am I hireable ?</button>
+                            <p id="hire-result"></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,7 +99,8 @@
                             <br>
                             Aujourd’hui, souhaitant approfondir mon expertise et élargir mes compétences en
                             développement et en gestion de projet, je suis à la recherche d’une alternance sur deux ans
-                            dans le cadre d’un master. </p>
+                            dans le cadre d’un master.
+                        </p>
                     </div>
 
                     <div class="col-md-6 col-12 d-flex justify-content-center profilpic">
