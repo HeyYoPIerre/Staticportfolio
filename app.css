@@ -10,10 +10,18 @@ body {
 
 h1 {
     text-align: start;
+    font-size: 3rem !important;
 }
 
-.name{
-    color: #7f5af0; 
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    color: #7f5af0;
 }
 
 .devweb {
@@ -64,29 +72,29 @@ h1 {
     background: linear-gradient(to right, #2a0057 0%, #D444CF 50%, #2a0057 100%);
     color: white;
     border-radius: 24px;
-    padding: 12px 24px; 
-    font-size: 1.1rem; 
-    font-weight: bold; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     display: inline-block;
-    border: none; 
+    border: none;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
-    box-shadow: 0px 4px 15px rgba(212, 68, 207, 0.3); 
+    box-shadow: 0px 4px 15px rgba(212, 68, 207, 0.3);
 }
 
 #landing .cta:hover {
     background: linear-gradient(to right, #D444CF 0%, #2a0057 100%);
     color: white;
-    transform: scale(1.05); 
-    box-shadow: 0px 6px 20px rgba(212, 68, 207, 0.5); 
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(212, 68, 207, 0.5);
 }
 
 #landing .cta:active {
-    transform: scale(0.98); 
+    transform: scale(0.98);
     box-shadow: 0px 3px 10px rgba(212, 68, 207, 0.4);
 }
 
@@ -109,25 +117,58 @@ h1 {
     gap: 8px;
     padding-bottom: 10px;
 }
+
 .circle {
     width: 12px;
     height: 12px;
     border-radius: 50%;
 }
-.red { background-color: #ff5f56; }
-.orange { background-color: #ffbd2e; }
-.green { background-color: #27c93f; }
+
+.red {
+    background-color: #ff5f56;
+}
+
+.orange {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: #27c93f;
+}
+
 .code {
     font-size: 14px;
     white-space: pre-line;
 }
-.keyword { color: #ff79c6; }
-.variable { color: #8be9fd; }
-.string { color: #f1fa8c; }
-.number { color: #bd93f9; }
-.boolean { color: #ffb86c; }
-.function { color: #50fa7b; }
-.operator { color: #ff79c6; }
+
+.keyword {
+    color: #ff79c6;
+}
+
+.variable {
+    color: #8be9fd;
+}
+
+.string {
+    color: #f1fa8c;
+}
+
+.number {
+    color: #bd93f9;
+}
+
+.boolean {
+    color: #ffb86c;
+}
+
+.function {
+    color: #50fa7b;
+}
+
+.operator {
+    color: #ff79c6;
+}
+
 .btn-check-hire {
     background-color: #50fa7b;
     color: black;
@@ -307,7 +348,7 @@ h1 {
     border-radius: 8px;
     margin-bottom: 30px;
     position: relative;
-    box-shadow: 0 0 25px rgba(127, 90, 240, 0.8); 
+    box-shadow: 0 0 25px rgba(127, 90, 240, 0.8);
 }
 
 .skills-title::before {
@@ -384,17 +425,18 @@ h1 {
     font-size: 14px;
     margin-top: 10px;
 }
+
 /* 
     Education
 */
 
-#education{
+#education {
     background-image: url('hero.svg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     width: auto;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 #education::before {
